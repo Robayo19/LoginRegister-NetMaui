@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mo="clr-namespace:PracticaRealRobayoJose_DI.Modelo"
+             x:DataType="mo:Usuario"
+             x:Class="PracticaRealRobayoJose_DI.Templates.TemplateView">
+    <HorizontalStackLayout Spacing="3">
+        <Label Text="{Binding Id}"/>
+        <Label Text="{Binding Nick}"/>
+        <Label Text="{Binding Nombre}"/>
+        <Label Text="{Binding Contrasena}"/>
+        <Label Text="{Binding Edad}"/>
+    </HorizontalStackLayout>
+</ContentView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PracticaRealRobayoJose_DI.VistaModelo"
+             xmlns:te="clr-namespace:PracticaRealRobayoJose_DI.Templates"
+             x:Class="PracticaRealRobayoJose_DI.Vistas.VistaBienvenida"
+             Title="Bienvenid@">
+    <Grid>
+        <VerticalStackLayout Opacity="0.8" BackgroundColor="Black">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="30">
+            <Label Text="LISTA DE USUARIOS: " FontSize="50" FontFamily="Franklin Gothic" TextColor="#3498db" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <CollectionView x:Name="usuarios" BackgroundColor="#3498db" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+                        <Label Text="{Binding Nick}" FontSize="30" FontFamily="Franklin Gothic" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

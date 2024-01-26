@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PracticaRealRobayoJose_DI.VistaModelo" 
+             xmlns:te="clr-namespace:PracticaRealRobayoJose_DI.Templates"
+             x:Class="PracticaRealRobayoJose_DI.Vistas.VistaRegistro"
+             Title="Registro">
+    <ContentPage.BindingContext>
+        <vm:ValidadorRegistro/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Label Text="Usuario:" FontSize="18"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Entry Text="{Binding Nick}" Placeholder="Ingrese su usuario" Margin="300,0,300,20"/>
+        <Label Text="Nombre:" FontSize="18"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Entry Text="{Binding Nombre}" Placeholder="Ingrese su nombre" Margin="300,0,300,20"/>
+        <Label Text="Contraseña:" FontSize="18"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Entry Text="{Binding Contrasena}" IsPassword="True" Placeholder="Ingrese su contraseña" Margin="300,0,300,20"/>
+        <Label Text="Contraseña:" FontSize="18"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Entry Text="{Binding ConfirmarContrasena}" IsPassword="True" Placeholder="Repita su contraseña" Margin="300,0,300,20"/>
+        <Label Text="Edad:" FontSize="18"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Entry Text="{Binding Edad}" Placeholder="Ingrese su edad" Margin="300,0,300,40"/>
+        <Button Text="Entrar" Command="{Binding validarCommand}" BackgroundColor="#3498db" TextColor="White" CornerRadius="5" Margin="400,0,400,20"/>
+        <Button Text="Ir a Inicio" Command="{Binding IrAInicioCommand}" BackgroundColor="#2ecc71" TextColor="White" CornerRadius="5" Margin="400,0,400,20"/>
+
+        <CollectionView ItemsSource="{Binding errores}"/>
+    </VerticalStackLayout>
+
+</ContentPage>
